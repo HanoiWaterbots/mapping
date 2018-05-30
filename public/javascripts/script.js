@@ -1,119 +1,96 @@
-let data = [
-    {
-        lat: 51.505,
-        lng: -0.09,
-        wt: 1
-    },
-    {
-        lat: 52.505,
-        lng: 1.09,
-        wt: 2
-    },
-    {
-        lat: 53.505,
-        lng: 2.09,
-        wt: 3
-    }
-];
-
-let mymap = L.map('mapid').setView([51.505, -0.09], 15);
-let marker = L.marker(mymap.getCenter());
+//Color function
 let whiteToYellow = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(50, 0.5), {
     outputHue: 60
 });
-
 // We'll then vary the color from yellow to red from 50 to 100
 let yellowToRed = new L.HSLHueFunction(new L.Point(50, 60), new L.Point(100, 0));
-
 // Create a new PiecewiseFunction and use this as you would any other LinearFunction
 let colorFunction = new L.PiecewiseFunction([whiteToYellow, yellowToRed]);
 
-let flowLayer = new L.FlowLine(data, {
+let options = {
     recordsField: null,
     locationMode: L.LocationModes.LATLNG,
     latitudeField: 'lat',
     longitudeField: 'lng',
-    gradient: true,
-    tooltipOptions: {
-        className: 'leaflet-div-icon'
-    },
     layerOptions: {
-        opacity: 0.9
+        opacity: 1.0
     },
     displayOptions: {
         wt:{
             displayName: 'Weight',
             color: colorFunction,
-            weight: new L.LinearFunction([0, 3], [15.02968, 20]),
         }
     },
-});
+};
 
-//Add the basic layer to the map
-function drawMap(){
 
-    let baseLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1IjoiaGFub2l3YXRlcmJvdHMiLCJhIjoiY2poa3FqeDJjMGJodjM2cDYzY2hvMXd2dyJ9.9Zw-sF3e7HwpHFO3wfZrVQ'
-    });
+let serverRequest = function (url, callback) {
+    let xmlhttp;
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    }
+    else{
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+    let data = {};
 
-    baseLayer.addTo(mymap);
-
-    //Add layer control
-    let layerControl = L.control.layers({
-        'Map': baseLayer
-    });
-
-    layerControl.addTo(mymap);
-    mymap.addLayer(flowLayer);
-    layerControl.addOverlay(flowLayer, "Data");
-}
-
-function drawLine(w) {
-    data.push({
-        lat: marker.getLatLng().lat,
-        lng: marker.getLatLng().lng,
-        wt: w
-    });
+    xmlhttp.onreadystatechange = function () {
+        if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+            data = JSON.parse(xmlhttp.responseText);
+            callback(data);
+        }
+    };
     try{
-        flowLayer.addData(data);
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
     }
     catch (e) {
         console.log(e);
     }
+};
+
+let data = {};
+
+//Map construction
+let map = L.map('mapid').setView([21.045567, 105.842898], 12);
+let locationMarker = L.marker(map.getCenter());
+let myData = new L.FlowLine(data, options);
+locationMarker.addTo(map);
+
+serverRequest('/fetchConfig/mapKey', constructMap);
+
+function constructMap(res) {
+    //Layers of the map
+    let baseLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: res.key,
+    });
+
+    let style1 = 'https://api.mapbox.com/styles/v1/hanoiwaterbots/cjhp5zh4l0eh92rs6m5sbts1z/tiles/256/{z}/{x}/{y}?access_token=' + res.key;
+    let baseLayer1 = L.tileLayer(style1);
+
+//Create layer controller
+    let layerControl = L.control.layers({
+        'Realistic': baseLayer,
+        'Paper': baseLayer1
+    });
+
+    layerControl.addTo(map);
+//Add the layer to the map
+    baseLayer.addTo(map);
+    myData.addTo(map);
+    layerControl.addOverlay(myData, "Data");
 }
 
-//Update location marker to the new location
-function putLocation(lat, lng, weight){
-    marker.setLatLng(L.latLng(lat,lng));
-    drawLine(weight);
-}
+//Deal with the different tasks
+serverRequest("/fetchDB", (res) => {
+    data = res.data;
+    myData.addData(data);
+});
 
-function getLocation(i){
-    let coordinates = {
-        lat: 0.00,
-        lng: 0.00,
-        wt: 1
-    };
-    coordinates.lat = 51.505 + i;
-    coordinates.lng = -0.09 + i;
-    coordinates.wt = 1+i;
-
-    return coordinates;
-}
-
-function start(){
-    drawMap();
-    marker.addTo(mymap);
-    let i = 0;
-    /*
-    setInterval(function (){
-        let coords = getLocation(i);
-        putLocation(coords.lat, coords.lng, coords.weight);
-        i++;
-    }, 10000);*/
-}
-
-start();
+serverRequest("/getLocation", (res) =>{
+    let coords = res;
+    locationMarker.setLatLng(L.latLng(coords.lat, coords.lng));
+});
