@@ -2,3 +2,4 @@ node_modules/*
 config.json
 hanoiwaterbots_ec2.pem
 ec2*
+gitkey

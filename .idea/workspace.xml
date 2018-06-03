@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="835b5968-3ad0-41e2-b597-0017a66632c3" name="Default" comment="establish socket connection">
-      <change afterPath="$PROJECT_DIR$/public/javascripts/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/javascripts/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/databaseHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HanoiWaterbots.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HanoiWaterbots.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="835b5968-3ad0-41e2-b597-0017a66632c3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/fetchDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fetchDB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +19,29 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+                <state relative-caret-position="449">
+                  <caret line="71" selection-start-line="71" selection-end-line="71" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gitkey" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gitkey">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="40" selection-start-column="40" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -44,7 +50,7 @@
             <entry file="file://$PROJECT_DIR$/routes/fetchDB.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="356">
-                  <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+                  <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -152,7 +158,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/keys.config" />
         <option value="$PROJECT_DIR$/public/javascripts/script2.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/routes/fetchConfig.js" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/bin/www" />
@@ -164,6 +169,8 @@
         <option value="$PROJECT_DIR$/routes/databaseHandler.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/fetchDB.js" />
+        <option value="$PROJECT_DIR$/gitkey" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -285,7 +292,7 @@
       <workItem from="1527753046552" duration="6928000" />
       <workItem from="1527915766951" duration="5105000" />
       <workItem from="1527961822250" duration="3140000" />
-      <workItem from="1528011100663" duration="9674000" />
+      <workItem from="1528011100663" duration="9974000" />
     </task>
     <task id="LOCAL-00001" summary="removed any sensitive info">
       <created>1527674065699</created>
@@ -294,24 +301,31 @@
       <option name="project" value="LOCAL" />
       <updated>1527674065699</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="establish socket connection">
+      <created>1528022198837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528022198837</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72805000" />
+    <option name="totallyTimeSpent" value="73105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33085108" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23958333" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33085108" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23958333" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32910052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -488,14 +502,28 @@
     <entry file="file://$PROJECT_DIR$/routes/fetchDB.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="449">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gitkey">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
