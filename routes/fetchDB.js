@@ -1,9 +1,5 @@
 let express = require('express');
 let router = express.Router();
-let db = require('mongodb').MongoClient;
-
-let url = "";
-let dbname = "";
 
 let data = {
     data: [
@@ -31,7 +27,9 @@ let data = {
 };
 
 router.get('/', function (req, res, next) {
-    res.send(data);
+    if(req.client){
+        res.send(data);
+    }
 });
 
 module.exports = router;
