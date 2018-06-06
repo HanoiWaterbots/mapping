@@ -29,6 +29,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/**
+ * Connect to the database as the server starts
+ */
 app.use(function (req, res, next) {
     db.connect(ATLAS_URL, {useNewUrlParser: true}, function (err, client) {
         if(err){
@@ -41,6 +44,9 @@ app.use(function (req, res, next) {
     });
 });
 
+/**
+ * Handle the socket connection
+ */
 app.use(function (req, res, next) {
     res.io = io;
     next();

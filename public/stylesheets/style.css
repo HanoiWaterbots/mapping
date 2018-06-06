@@ -7,6 +7,21 @@ a {
   color: #00B7FF;
 }
 
-#mapid{
+#map{
     height: 700px;
+}
+
+.leaflet-div-icon{
+    width: 150px !important;
+    height: auto !important;
+}
+
+.key{
+    font-size: 150% !important;
+    padding: 5px !important;
+}
+
+.value{
+    font-size: 130% !important;
+    padding: 5px !important;
 }

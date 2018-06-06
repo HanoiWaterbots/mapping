@@ -1,14 +1,26 @@
 //Deal with the different tasks
-serverRequest("/fetchDB", (res) => {
-    data = res.data;
-    myData.addData(data);
-});
+let startRequests = function(){
+    /**
+     * Send a server request to fetch data from the server
+     */
+    serverRequest("/fetchDB", (res) => {
+        data = res.data;
+        dataLine.addData(data);
+        dataLayer1.addData(data);
+    });
 
-serverRequest("/getLocation", (res) =>{
-    let coords = res;
-    locationMarker.setLatLng(L.latLng(coords.lat, coords.lng));
-});
+    /**
+     * Send a request to the server to fetch current location
+     */
+    serverRequest("/getLocation", (res) =>{
+        let coords = res;
+        locationMarker.setLatLng(L.latLng(coords.lat, coords.lng));
+    });
 
-socketConnection((data)=>{
-    console.log(data);
-});
+    /**
+     * Request to create a socket connection
+     */
+    socketConnection((data)=>{
+        console.log(data);
+    });
+};

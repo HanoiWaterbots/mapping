@@ -1,3 +1,8 @@
+/**
+ * Send a request to the server
+ * @param url   The URL to which the request has to be sent
+ * @param callback  The callback function that will be called after request completes
+ */
 let serverRequest = function (url, callback) {
     let xmlhttp;
     if(window.XMLHttpRequest){
@@ -23,6 +28,10 @@ let serverRequest = function (url, callback) {
     }
 };
 
+/**
+ * Make a socket connection to the server for real-time updates
+ * @param callback  Function that executes after the connection is made
+ */
 let socketConnection = function (callback) {
     socket.on('updateData', function (data) {
         callback(data);
