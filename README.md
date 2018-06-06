@@ -22,3 +22,5 @@ data: [
 ```
 
 Have a look at [fetchDB.js](routes/fetchDB.js) to see usage
+
+![Screenshot](https://preview.ibb.co/d29mL8/App_screenshot.png)
