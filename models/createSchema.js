@@ -1,5 +1,9 @@
 let mongoose = require('mongoose');
 
+/**
+ * Mongoose Schema for the database
+ * @author dhruv289
+ */
 let waterReadingSchema = new mongoose.Schema({
     lat: {type: Number, required:true},
     lng: {type: Number, required:true},

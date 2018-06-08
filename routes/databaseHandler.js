@@ -5,8 +5,6 @@ let Data = require('../models/createSchema');
 /**
  * Handle POST request for incoming data from the hardware.
  *
- * WORK IN PROGRESS: THERE IS NO MONGOOSE SCHEMA YET SO ANY KIND OF DATA
- * IS ALLOWED FOR NOW. AVOID USING THIS FOR NOW
  */
 router.post('/data', function (req, res, next) {
     let data = req.body;
@@ -21,14 +19,13 @@ router.post('/data', function (req, res, next) {
         Conductivity: data.Conductivity
     }, function (err, entry) {
         if(err){
-            console.log("There was an error completing the request");
             res.status(err.status || 500);
-            res.send("Error. Look at server logs for details.")
+            res.send(err);
         }
         else{
-            console.log(entry);
+            console.log("REQUEST TO ADD THE DOCUMENT:", entry);
             res.status(200);
-            res.send("Done");
+            res.send(entry);
         }
     });
 });
