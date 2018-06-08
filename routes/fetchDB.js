@@ -49,9 +49,7 @@ let data = {
  * GET request to fetch the data from the database
  */
 router.get('/', function (req, res, next) {
-    if(req.client){
-        res.send(data);
-    }
+    res.send(data);
 });
 
 module.exports = router;

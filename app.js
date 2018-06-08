@@ -11,6 +11,7 @@ let dbhandler = require('./routes/databaseHandler');
 let app = express();
 let io = require('socket.io')(8080);
 let db = require('mongodb').MongoClient;
+let mongoose = require('mongoose');
 
 let CONFIG  = require('./config');
 
@@ -32,16 +33,29 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * Connect to the database as the server starts
  */
+
 app.use(function (req, res, next) {
-    db.connect(ATLAS_URL, {useNewUrlParser: true}, function (err, client) {
-        if(err){
-            console.log("Error connecting to the database");
-        }
-        else{
-            req.client = client;
-            next();
-        }
+    mongoose.connect(ATLAS_URL).then(()=>{
+        let db = mongoose.connection;
+        db.on('error', function (err) {
+            console.log(err);
+        });
+
+        db.on('open', function () {
+            console.log("Connected to database");
+        });
+        next();
     });
+
+    // db.connect(ATLAS_URL, {useNewUrlParser: true}, function (err, client) {
+    //     if(err){
+    //         console.log("Error connecting to the database");
+    //     }
+    //     else{
+    //         req.client = client;
+    //         next();
+    //     }
+    // });
 });
 
 /**
