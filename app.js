@@ -46,16 +46,6 @@ app.use(function (req, res, next) {
         });
         next();
     });
-
-    // db.connect(ATLAS_URL, {useNewUrlParser: true}, function (err, client) {
-    //     if(err){
-    //         console.log("Error connecting to the database");
-    //     }
-    //     else{
-    //         req.client = client;
-    //         next();
-    //     }
-    // });
 });
 
 /**

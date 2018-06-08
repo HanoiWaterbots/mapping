@@ -4,7 +4,8 @@ let startRequests = function(){
      * Send a server request to fetch data from the server
      */
     serverRequest("/fetchDB", (res) => {
-        data = res.data;
+        data = res;
+        console.log(data);
         dataLine.addData(data);
         dataLayer1.addData(data);
     });
