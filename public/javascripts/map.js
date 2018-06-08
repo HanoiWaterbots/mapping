@@ -66,11 +66,12 @@ let createBarChartLayer = function () {
                     return (value.toFixed(2) + " \xB0C");
                 }
             },
-            'Dissolved Oxygen': {
+            'DO': {
                 fillColor: '#FB6A4A',
                 minValue: 0,
                 maxValue: 20,
                 maxHeight: 20,
+                displayName: 'Dissolved Oxygen',
                 displayText: function (value) {
                     return (value.toFixed(2) + "mg/L");
                 }
