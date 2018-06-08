@@ -7,20 +7,20 @@ and plotting data.
 
 ## Current Data Schematics for the database
 ```
-data: [
-            {
-                lat: <LATITUDE>,
-                lng: <LONGITUDE>,
-                pH: <pH Value>,
-                Temperature: <Temperature in degree celsius>,
-                'Dissolved Oxygen': <Value in mg/L>,
-                ORP: <Oxidation Reduction Potential in mV>,
-                Conductivity: <Value in micro-Siemens/cm>,
-            },
+[
+        {
+            lat: {type: Number, required:true},
+            lng: {type: Number, required:true},
+            pH: {type: Number, enum: {$range: [0, 14, 0.01]}},     //restricting the range of the acceptable input
+            Temperature: Number,
+            DO: Number,
+            ORP: Number,
+            Conductivity: Number
+        },
             ...
     ]
 ```
 
-Have a look at [fetchDB.js](routes/fetchDB.js) to see usage
+Have a look at [createSchema.js](models/createSchema.js) to see usage
 
 ![Screenshot](https://preview.ibb.co/d29mL8/App_screenshot.png)
