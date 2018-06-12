@@ -49,7 +49,7 @@ let createBarChartLayer = function () {
         },
         chartOptions:{
             'pH': {
-                fillColor: '#FEE5D9',
+                fillColor: '#E65100',
                 minValue: 0,
                 maxValue: 14,
                 maxHeight: 20,
@@ -58,7 +58,7 @@ let createBarChartLayer = function () {
                 }
             },
             'Temperature': {
-                fillColor: '#FCAE91',
+                fillColor: '#1B5E20',
                 minValue: 0,
                 maxValue: 20,
                 maxHeight: 20,
@@ -67,7 +67,7 @@ let createBarChartLayer = function () {
                 }
             },
             'DO': {
-                fillColor: '#FB6A4A',
+                fillColor: '#EEFF41',
                 minValue: 0,
                 maxValue: 20,
                 maxHeight: 20,
@@ -77,7 +77,7 @@ let createBarChartLayer = function () {
                 }
             },
             'ORP': {
-                fillColor: '#CB181D',
+                fillColor: '#311B92',
                 minValue: 0,
                 maxValue: 20,
                 maxHeight: 20,
@@ -86,7 +86,7 @@ let createBarChartLayer = function () {
                 }
             },
             'Conductivity' : {
-                fillColor: '#CB181D',
+                fillColor: '#FFD600',
                 minValue: 0,
                 maxValue: 20,
                 maxHeight: 20,
@@ -138,10 +138,11 @@ function constructMap(res) {
     //Add the base layer that consists of the map
     baseLayer.addTo(map);
     //Add the layer that contains the data line to the map
-    dataLine.addTo(map);
+    //dataLine.addTo(map);
+    dataLayer1.addTo(map);
 
     //.addOverlay allows us to add all the layers to the map in the background. We can see them in the layer toolbox
-    layerControl.addOverlay(dataLine, "Data");
+    //layerControl.addOverlay(dataLine, "Data");
     layerControl.addOverlay(dataLayer1, "Histograms");
     layerControl.addOverlay(locationMarker, "Location");
 
