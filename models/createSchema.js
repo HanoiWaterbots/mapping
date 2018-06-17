@@ -5,6 +5,8 @@ let mongoose = require('mongoose');
  * @author dhruv289
  */
 let waterReadingSchema = new mongoose.Schema({
+   
+    timestamp: {type: Date, required:true},
     lat: {type: Number, required:true},
     lng: {type: Number, required:true},
     pH: {type: Number, enum: {$range: [0, 14, 0.01]}},     //restricting the range of the acceptable input
