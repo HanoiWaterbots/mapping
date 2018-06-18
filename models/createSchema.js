@@ -12,7 +12,7 @@ let waterReadingSchema = new mongoose.Schema({
     DO: Number,
     ORP: Number,
     Conductivity: Number,
-    timestamp: Date
+    timestamp: String
 });
 
 let waterReadingModel = mongoose.model('data', waterReadingSchema);
