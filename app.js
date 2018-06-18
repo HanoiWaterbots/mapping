@@ -33,20 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * Connect to the database as the server starts
  */
+mongoose.connect(ATLAS_URL);
 
-app.use(function (req, res, next) {
-    mongoose.connect(ATLAS_URL).then(()=>{
-        let db = mongoose.connection;
-        db.on('error', function (err) {
-            console.log(err);
-        });
-
-        db.on('open', function () {
-            console.log("Connected to database");
-        });
-        next();
-    });
-});
 
 /**
  * Handle the socket connection

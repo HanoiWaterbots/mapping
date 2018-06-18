@@ -8,6 +8,7 @@ let Data = require('../models/createSchema');
  */
 router.post('/data', function (req, res, next) {
     let data = req.body;
+    let io = res.io;
     //Send to the database
     Data.create({
         lat: data.lat,
@@ -25,6 +26,7 @@ router.post('/data', function (req, res, next) {
         }
         else{
             console.log("REQUEST TO ADD THE DOCUMENT:", entry);
+            io.emit('updateData');
             res.status(200);
             res.send(entry);
         }
