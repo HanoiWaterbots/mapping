@@ -11,7 +11,8 @@ let waterReadingSchema = new mongoose.Schema({
     Temperature: Number,    
     DO: Number,
     ORP: Number,
-    Conductivity: Number
+    Conductivity: Number,
+    timestamp: Date
 });
 
 let waterReadingModel = mongoose.model('data', waterReadingSchema);

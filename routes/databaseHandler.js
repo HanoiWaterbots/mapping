@@ -16,7 +16,8 @@ router.post('/data', function (req, res, next) {
         Temperature: data.Temperature,
         DO: data.DO,
         ORP: data.ORP,
-        Conductivity: data.Conductivity
+        Conductivity: data.Conductivity,
+        timestamp: data.timestamp
     }, function (err, entry) {
         if(err){
             res.status(err.status || 500);
