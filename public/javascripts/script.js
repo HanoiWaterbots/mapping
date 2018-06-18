@@ -5,7 +5,6 @@ let startRequests = function(){
      */
     serverRequest("/fetchDB", (res) => {
         data = res;
-        console.log(data);
         dataLine.addData(data);
         dataLayer1.addData(data);
     });
@@ -22,6 +21,10 @@ let startRequests = function(){
      * Request to create a socket connection
      */
     socketConnection((data)=>{
-        console.log(data);
+        serverRequest("/fetchDB", (res) => {
+            data = res;
+            dataLine.addData(data);
+            dataLayer1.addData(data);
+        });
     });
 };

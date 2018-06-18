@@ -34,6 +34,6 @@ let serverRequest = function (url, callback) {
  */
 let socketConnection = function (callback) {
     socket.on('updateData', function (data) {
-        callback(data);
+        callback(data)
     });
 };

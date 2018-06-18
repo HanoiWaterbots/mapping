@@ -1,5 +1,6 @@
 //Data for the application
 let data = {};
+//let socket = io.connect('localhost:8080');
 let socket = io.connect('http://ec2-18-205-17-12.compute-1.amazonaws.com:8080');
 
 //Color function

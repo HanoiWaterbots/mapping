@@ -26,7 +26,7 @@ router.post('/data', function (req, res, next) {
         }
         else{
             console.log("REQUEST TO ADD THE DOCUMENT:", entry);
-            io.emit('updateData');
+            io.emit('updateData', entry);
             res.status(200);
             res.send(entry);
         }
