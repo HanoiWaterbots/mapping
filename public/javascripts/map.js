@@ -61,7 +61,7 @@ let createBarChartLayer = function () {
             'Temperature': {
                 fillColor: '#1B5E20',
                 minValue: 0,
-                maxValue: 20,
+                maxValue: 50,
                 maxHeight: 20,
                 displayText: function (value) {
                     return (value.toFixed(2) + " \xB0C");
@@ -70,7 +70,7 @@ let createBarChartLayer = function () {
             'DO': {
                 fillColor: '#EEFF41',
                 minValue: 0,
-                maxValue: 20,
+                maxValue: 1000,
                 maxHeight: 20,
                 displayName: 'Dissolved Oxygen',
                 displayText: function (value) {
@@ -80,7 +80,7 @@ let createBarChartLayer = function () {
             'ORP': {
                 fillColor: '#311B92',
                 minValue: 0,
-                maxValue: 20,
+                maxValue: 1000,
                 maxHeight: 20,
                 displayText: function (value) {
                     return (value.toFixed(2) + "mV");
@@ -89,7 +89,7 @@ let createBarChartLayer = function () {
             'Conductivity' : {
                 fillColor: '#FFD600',
                 minValue: 0,
-                maxValue: 20,
+                maxValue: 400,
                 maxHeight: 20,
                 displayText: function (value) {
                     return (value.toFixed(2) + " \u03BCS/cm");

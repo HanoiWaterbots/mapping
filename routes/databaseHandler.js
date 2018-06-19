@@ -22,6 +22,7 @@ router.post('/data', function (req, res, next) {
     }, function (err, entry) {
         if(err){
             res.status(err.status || 500);
+            console.log(err);
             res.send(err);
         }
         else{
