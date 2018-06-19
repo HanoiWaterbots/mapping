@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.send(null);
 });
 
+router.post('/team', function(req, res, next){
+    res.send('team');
+})
+
 module.exports = router;
