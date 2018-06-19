@@ -89,6 +89,7 @@ let createBarChartLayer = function () {
             'Conductivity' : {
                 fillColor: '#FFD600',
                 minValue: 0,
+                maxValue: 400,
                 maxHeight: 20,
                 displayText: function (value) {
                     return (value.toFixed(2) + " \u03BCS/cm");
