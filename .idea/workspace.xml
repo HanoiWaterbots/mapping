@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="835b5968-3ad0-41e2-b597-0017a66632c3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/fetchDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fetchDB.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +28,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="databaseHandler.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="databaseHandler.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/routes/databaseHandler.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="484">
-                  <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+                <state relative-caret-position="430">
+                  <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="fetchDB.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/routes/fetchDB.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -53,8 +62,8 @@
           <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+                <state relative-caret-position="306">
+                  <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -130,13 +139,13 @@
         <option value="$PROJECT_DIR$/createSchema.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/routes/fetchDB.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/javascripts/functions.js" />
         <option value="$PROJECT_DIR$/models/createSchema.js" />
         <option value="$PROJECT_DIR$/routes/databaseHandler.js" />
         <option value="$PROJECT_DIR$/public/javascripts/map.js" />
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
+        <option value="$PROJECT_DIR$/routes/fetchDB.js" />
       </list>
     </option>
   </component>
@@ -291,7 +300,7 @@
       <workItem from="1529324363288" duration="816000" />
       <workItem from="1529341619136" duration="1600000" />
       <workItem from="1529392257118" duration="4257000" />
-      <workItem from="1529484566843" duration="119000" />
+      <workItem from="1529484566843" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="removed any sensitive info">
       <created>1527674065699</created>
@@ -440,17 +449,24 @@
       <option name="project" value="LOCAL" />
       <updated>1529393465144</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="optimise server request">
+      <created>1529484741906</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1529484741906</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115514000" />
+    <option name="totallyTimeSpent" value="115925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23385416" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23385416" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015625" side_tool="true" weight="0.3744681" />
@@ -458,7 +474,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4984375" visible="true" weight="0.27978724" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4984375" visible="true" weight="0.27978724" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -518,7 +534,8 @@
     <MESSAGE value="Date to string" />
     <MESSAGE value="error" />
     <MESSAGE value="adjust max values" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust max values" />
+    <MESSAGE value="optimise server request" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimise server request" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/fetchDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
@@ -840,13 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/databaseHandler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -869,8 +872,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="306">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/databaseHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/fetchDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
