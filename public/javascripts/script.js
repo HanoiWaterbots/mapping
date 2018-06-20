@@ -21,10 +21,7 @@ let startRequests = function(){
      * Request to create a socket connection
      */
     socketConnection((data)=>{
-        serverRequest("/fetchDB", (res) => {
-            data = res;
-            dataLine.addData(data);
-            dataLayer1.addData(data);
-        });
+        dataLine.addData(data);
+        dataLayer1.addData(data);
     });
 };
