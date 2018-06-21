@@ -50,6 +50,16 @@ app.use('/getLocation', getLocation);
 app.use('/fetchConfig', fetchConfig);
 app.use('/dbhandler', dbhandler);
 
+app.get('/team', function(req, res){
+    res.sendFile('public/team.html' , { root : __dirname});
+    //res.sendFile('public/team.html')
+})
+
+app.get('/map', function(req, res){
+    res.sendFile('public/map.html' , { root : __dirname});
+    //res.sendFile('public/team.html')
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -65,5 +75,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;

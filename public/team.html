@@ -1,11 +1,171 @@
 <!DOCTYPE html>
-{% extends 'index.html' %}
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css"/>
+    <link rel="stylesheet" href="stylesheets/dvf.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Hanoi Waterbots</title>
 
-</body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/icon.jpeg">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <title>Team Members</title>
+
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container marketing">
+
+
+
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+          </div>
+          <div class="col-sm-4 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#"><h3>Hanoi Waterbots</h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="team">Team<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="map">Visualization</a>
+              </li>
+            </ul>
+            <!--form class="form-inline mt-2 mt-md-0"
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            -->
+          </div>
+        </nav>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Meet the Team</h1>
+        <p class="lead text-muted">Our team consists of students from Mechanics, Electronics, Computer Science, and Biology departments. </p>
+      </div>
+    </section>
+<!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="./assets/priyank.jpg">
+              <h2>Priyank Sharma</h2>
+              <h6>Computer Engineering, Year 2</h6>
+              <p>I am the project coordinator of Hanoi Waterbots (project funded by HKU GHELC) that aims to build semi-autonomous robots for systematic monitoring and estimation of pollution in the Red River of Hanoi, Vietnam. The project will be in effect from 15-30 June 2018. In March 2018, I was a part of the team that was sent on an experiential learning trip to Jaipur to discover and explore overseas experiential learning opportunities for engineering students at HKU. Priyank Sharma is an Indian actor, dancer and choreographer. He is best known for participating in the reality TV show Bigg Boss 11 in 2017.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="./assets/utkarsh.jpg" alt="Utkarsh Goel">
+              <h2>Utkarsh Goel</h2>
+              <h6>Computer Science, Year 2</h6>
+              <p>I have a keen interest in problem-solving and computer programming. I also like to work with electronics as a hobby. I have previously been to a few hackathons and have experience in server-side programming in languages like Node.js and Python. I am familiar with cloud computing services like AWS, Microsoft Azure, Heroku and have worked with SQL and Mongo databases. In addition, I have experience working with Raspberry Pi, Arduino and ESP for IoT applications. Presently, a part of TecHKU, I am working actively with a team of developers to build campus-life solutions at HKU.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="./assets/jason.jpeg" alt="Jason Wong">
+              <h2>Jason Wong</h2>
+              <h6>Mechanical Engineering, Year 3</h6>
+              <p>Since the beginning of my mechanical engineering studies,  I started my interest in studying robotics. I already acquired a wide range of experience in DIY  and crafting in my secondary school life, from the Design and Technology club activity and related competition(Infrastructure Building Competition for Secondary Schools and Solar RC car contest), and is recently working of "donkey Car", which is a DIY self driving  RC cars that involves Raspberry Pi and Python.</p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./assets/rachel.jpg">
+            <h2>Rachel Liao</h2>
+            <h6>Computer Engineering, Year 4</h6>
+            <p>I have extensive experience in mobile app and web development. I also have experience in Arduino programming on a course project, in which I connected the Arduino board to wifi and sent the data collected from the sensor to cloud. Moreover, my machine learning and data analysis skills may be helpful in processing and analyzing the pollution data. I sincerely hope that my technical skills are not only used for earning moneys, but also for helping with the issues that are crucial but less people pay attention to.</p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./assets/vishmika.jpg">
+            <h2>Vishmika Fernando</h2>
+            <h6>Computer Science, Year 3</h6>
+            <p>I believe this to be an amazing opportunity to use the knowledge and skills I have acquired over the years for a fruitful cause. Furthermore, I solemnly believe that this is a great venue to explore and improve my knowledge and understanding about real-life applications of classroom taught material. Given the aforementioned reasoning I believe I present myself as a viable candidate for this project.</p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./assets/dhruv.jpeg">
+            <h2>Dhruv Agrawal</h2>
+            <h6>Computer Science, Year 2</h6>
+            <p> As I understand you need someone to map the data that is collected during the project and be able to efficiently display the important findings from the same. I am second year computer science student. My experience from past 6 years of working with JAVA allows me to be very familiar with the GUI part of the language. This makes me very capable for making the programs required by the project. Furthermore, studying advanced linear algebra as a part of my math minor lets me have good knowledge about how to perform required transformations of the data provided. </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./assets/ambrose.jpg">
+            <h2>Ambrose Wong</h2>
+            <h6>Biology, Year 4</h6>
+            <p>I have joined the Cambodia Internship last summer and study the villagers plastic waste treatment and provide education and basic health care to the villagers and those PUC university students. I think I have acquired related studies on Biological field (Marine biology 3301 and 4301) as well as Toxicology (BIOL3109, 3110). I would like to apply the knowledge I have learnt in textbook to serve the local people and at the same time learning more about the situation on the Vietnam marine lives and the relationship to the livelihood of the local villagers. </p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./assets/michelle.jpg">
+            <h2>Michelle Wang</h2>
+            <h6>Computer Science, Year 4</h6>
+            <p>With the data waterbots collected, a reusable and maintainable project will be created to monitor the levels of pollution in the red river, which will bring strong impact for the local communities to take care more of the habitable surroundings. Furthermore, I would like to ensure the integrity of the data that the waterbots will be collecting. I hope I could help with the database collection and visualization for this project, which will definitely deepen the understanding of the pollution of the red river for local people.</p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="./assets/chau.jpg">
+            <h2>Tran Ngoc Chau</h2>
+            <h6>Biology, Year 3</h6>
+            <p>As a Vietnamese myself, I am aware of the pollution situation, the urgent need to deal with the problem, and yet the limiting solutions in my home country. Therefore, this project will enable me to find out the causes of the pollution, learn more about project design and implementation, and create benefits to the affected community in Viet Nam in the future. Besides the above reasons, I believe my past experiences will enable me to contribute to the development of the project.</p>
+          </div>
+        </div>
+
+
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p><a href="https://www.facebook.com/hanoiwaterbots">Visit our Facebook page</a></p>
+
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
+    <script src="javascripts/popper.min.js"></script>
+    <script src="javascripts/holder.min.js"></script>
+    <script>
+      $(function () {
+        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+      });
+    </script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>

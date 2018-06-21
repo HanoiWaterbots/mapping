@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
             res.send(err);
         }
         else{
-            console.log(data);
+            //console.log(data);
             res.status(200);
             res.send(data);
         }
