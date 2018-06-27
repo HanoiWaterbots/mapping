@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -9,6 +8,7 @@ a {
 
 #map{
     height: 700px;
+    margin-top:90px;
 }
 
 .leaflet-div-icon{
