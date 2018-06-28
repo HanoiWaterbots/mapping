@@ -23,11 +23,11 @@ body {
 }
 
 .navbar-nav > li > a {
-	padding-top:25px !important; 
-	padding-bottom:25px !important;
+	padding-top:10px !important; 
+	padding-bottom:10px !important;
 }
 .navbar {
-	min-height:30px !important
+	min-height:15px !important
 }
 
 /* Declare heights because of positioning of img element */
