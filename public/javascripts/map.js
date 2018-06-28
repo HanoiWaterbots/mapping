@@ -94,6 +94,24 @@ let createBarChartLayer = function () {
                 displayText: function (value) {
                     return (value.toFixed(2) + " \u03BCS/cm");
                 }
+            },
+            'Cu' : {
+                fillColor: '#FFD600',
+                minValue: 0,
+                maxValue: 400,
+                maxHeight: 20,
+                displayText: function (value) {
+                    return (value.toFixed(2));
+                }
+            },
+            'Pb' : {
+                fillColor: '#FFD600',
+                minValue: 0,
+                maxValue: 400,
+                maxHeight: 20,
+                displayText: function (value) {
+                    return (value.toFixed(2));
+                }
             }
         }
     };

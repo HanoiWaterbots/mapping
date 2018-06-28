@@ -12,6 +12,8 @@ let waterReadingSchema = new mongoose.Schema({
     DO: Number,
     ORP: Number,
     Conductivity: Number,
+    Cu: Number,
+    Pb: Number,
     timestamp: String
 });
 
