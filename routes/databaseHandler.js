@@ -18,6 +18,8 @@ router.post('/data', function (req, res, next) {
         DO: data.DO,
         ORP: data.ORP,
         Conductivity: data.Conductivity,
+        Cu: data.Cu,
+        Pb: data.Pb,
         timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta'})
     }, function (err, entry) {
         if(err){
