@@ -20,11 +20,12 @@ let startRequests = function(){
     /**
      * Request to create a socket connection
      */
-    socketConnection((data)=>{
+    socketConnection((entry)=>{
         serverRequest("/fetchDB", (res) => {
-            data = res;
-            dataLine.addData(data);
+            console.log(entry);
+            data.push(entry);
             dataLayer1.addData(data);
+            console.log(data);
         });
     });
 };
